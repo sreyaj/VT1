@@ -1,0 +1,9 @@
+
+resources:
+  - name: nginx
+    type: image
+    integration: ankul-docker #your account integration
+    source:
+      name: "ankul/nginx"
+      isPull: false
+      tag: latest
