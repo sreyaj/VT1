@@ -4,6 +4,6 @@ resources:
     type: image
     integration: ankul-docker #your account integration
     source:
-      name: "ankul/test-repo"
+      name: "deeika/test-repo"
       isPull: false
       tag: latest
