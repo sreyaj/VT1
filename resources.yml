@@ -2,7 +2,7 @@
 resources:
   - name: nginx
     type: image
-    integration: ankul-docker #your account integration
+    integration: deepika-docker #your account integration
     source:
       name: "deepika/test-repo"
       isPull: false
