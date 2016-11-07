@@ -7,3 +7,4 @@ resources:
       name: "deepika/test-repo"
       isPull: false
       tag: latest
+
