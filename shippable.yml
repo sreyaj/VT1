@@ -8,3 +8,17 @@ python:
 build:
   ci:
     - python --version
+
+integrations:
+  notifications:  
+    - integrationName: deepika-email
+      type: email
+      recipients: 
+        - deepika@shippable.com
+      sendLogsInEmail: true
+      
+    - integrationName: deepika-slack
+      type: slack
+      recipients:
+        - "#deepika-test"
+      
