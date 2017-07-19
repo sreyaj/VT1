@@ -21,3 +21,4 @@ integrations:
       type: slack
       recipients:
         - "#deepika-test"
+
