@@ -12,5 +12,5 @@ build:
 
 integrations:
   key:
-    - integrationName: test-sshKey
-      type: sshKey
+    - integrationName: old-ssh
+      type: ssh-key
