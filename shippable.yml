@@ -10,14 +10,6 @@ build:
     - python --version
 
 integrations:
-  notifications:  
-    - integrationName: email
-      type: email
-      recipients: 
-        - deepika@shippable.com
-      sendLogsInEmail: true
-      
-    - integrationName: deepika-slack
-      type: slack
-      recipients:
-        - "#deepika-test"
+  key:
+    - integrationName: test-sshKey
+    - type: sshKey
