@@ -8,7 +8,7 @@ python:
 build:
   ci:
     - python --version
-    - cat /tmp/ssh/sshkey
+    - cat /tmp/ssh/testsshKey
 
 integrations:
   key:
