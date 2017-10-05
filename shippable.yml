@@ -3,14 +3,17 @@ language: python
 
 # Version number
 python:
-  - 2.7
+  #- 2.6
+  - 3.5
 
 build:
   ci:
     - python --version
-    - cat /tmp/ssh/testsshKey
-
+    - cat /tmp/ssh/pemkey
+    - cat /tmp/ssh/pemkey >> key.pem
+    - ls -a
+    - cat key.pem
 integrations:
   key:
-    - integrationName: test-sshKey
-      type: sshKey
+    - integrationName: test-pem
+      type: pem-key
