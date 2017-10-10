@@ -11,6 +11,6 @@ build:
     - cat /tmp/ssh/old-ssh-1
 
 integrations:
-  generic:
+  key:
     - integrationName: old-ssh-1
       type: sshKey
