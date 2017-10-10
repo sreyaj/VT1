@@ -8,7 +8,7 @@ python:
 build:
   ci:
     - python --version
-    - cat /tmp/ssh/old-ssh-1
+    - cat /tmp/ssh/oldssh1
 
 integrations:
   key:
