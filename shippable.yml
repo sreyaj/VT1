@@ -13,4 +13,4 @@ build:
 integrations:
   key:
     - integrationName: old-ssh-1
-      type: sshKey
+      type: ssh-key
