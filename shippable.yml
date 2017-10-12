@@ -8,7 +8,7 @@ python:
 build:
   ci:
     - python --version
-    - cd deep_gh_ssh/
+    - cd /tmp/ssh/
     - ls -a
 
 integrations:
