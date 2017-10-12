@@ -8,9 +8,9 @@ python:
 build:
   ci:
     - python --version
-    - cat /tmp/ssh/testsshKey
+    - cat /tmp/ssh/deep_gh_ssh
 
 integrations:
   generic:
-    - integrationName: test-sshKey
+    - integrationName: deep_gh_ssh
       type: sshKey
