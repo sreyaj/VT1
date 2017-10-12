@@ -8,9 +8,9 @@ python:
 build:
   ci:
     - python --version
-    - cat tmp/ssh/testsshKey
+    - cat /tmp/ssh/testssh
 
 integrations:
   key:
-    - integrationName: test-sshKey
+    - integrationName: testssh
       type: sshKey
