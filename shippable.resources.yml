@@ -5,7 +5,7 @@ resources:
 
   - name: config_repo
     type: gitRepo
-    integration: deepika-git
+    integration: deepika-github
     pointer:
       sourceName: deepikasl/VT1
       branch: ssh-test
