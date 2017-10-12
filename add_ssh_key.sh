@@ -1,5 +1,5 @@
 
-export RES_GH_SSH="deep-gh-ssh"
+export RES_GH_SSH="deep_gh_ssh"
 export RES_GH_SSH_UP=$(echo $RES_GH_SSH | awk '{print toupper($0)}')
 export RES_GH_SSH_META=$(eval echo "$"$RES_GH_SSH_UP"_META")
 
