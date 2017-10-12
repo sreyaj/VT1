@@ -2,3 +2,10 @@ resources:
   - name: deep_gh_ssh
     type: integration
     integration: deep_gh_ssh
+
+  - name: config_repo
+    type: gitRepo
+    integration: deepika-git
+    pointer:
+      sourceName: deepikasl/VT1
+      branch: ssh-test
