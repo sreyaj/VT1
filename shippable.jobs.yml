@@ -1,1 +1,12 @@
+jobs:
+  - name: ssh_into_machine
+    type: runSh
+    steps:
+      - IN: deep_gh_ssh
+      - TASK:
+        - script: ./IN/config_repo/gitRepo/add_ssh_key.sh 
+    on_success:
+      - script: echo 'on success !!!!!'
+    on_failure:
+      - script: echo 'Failed job .... :('
 
