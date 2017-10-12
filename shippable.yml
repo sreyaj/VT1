@@ -11,6 +11,6 @@ build:
     - cat /tmp/ssh/testsshKey
 
 integrations:
-  generic:
+  key:
     - integrationName: test-sshKey
       type: sshKey
