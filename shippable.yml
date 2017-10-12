@@ -13,4 +13,4 @@ build:
 integrations:
   key:
     - integrationName: testssh
-      type: ssh-key
+      type: sshKey
