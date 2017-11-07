@@ -8,6 +8,7 @@ python:
 build:
   ci:
     - python --version
+    - export TRIGGER_REASON=BaseImgChanged
 
 integrations:
   notifications:
