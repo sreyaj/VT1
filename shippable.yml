@@ -10,7 +10,7 @@ build:
     - python --version
     #- export TRIGGER_REASON=BaseImgChanged
     #- echo "TRIGGER_REASON-->"$TRIGGER_REASON
-    - shipctl put_resource_state $JOB_NAME TRIGGER_REASON BaseImgChanged
+    - shipctl put_resource_state "test_params" TRIGGER_REASON BaseImgChanged
     - echo "TRIGGER_REASON-->"$TRIGGER_REASON
 
 integrations:
