@@ -22,4 +22,13 @@ integrations:
       on_failure: always   
  
 
-
+    - integrationName: test-generictrigger #samplNod project in shiptest-rc-ow will trigger
+      type: webhook
+      payload:
+        - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
+        - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
+        - FOO=FUBU
+        - GOO=GUBU
+      on_start: always
+      on_success: always
+      on_failure: always
