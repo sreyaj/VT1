@@ -4,13 +4,12 @@ language: python
 # Version number
 python:
   - 2.7
-
 build:
   ci:
     - python --version
     - shipctl put_resource_state "test_params" TRIGGER_REASON BaseImgChanged
     #- sleep 1m
-
+    
 integrations:
   notifications:
     - integrationName: test-old-webhook   #issue will get created in github samleNod project
@@ -21,7 +20,6 @@ integrations:
       on_start: always
       on_success: always
       on_failure: always   
- 
 
     - integrationName: test-generictrigger #samplNod project in shiptest-rc-ow will trigger
       type: webhook
