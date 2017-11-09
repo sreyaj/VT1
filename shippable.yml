@@ -28,6 +28,6 @@ integrations:
         - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
         - FOO=FUBU
         - GOO=GUBU
-   #   on_start: always
+      on_start: always
       on_success: always
     #  on_failure: always
