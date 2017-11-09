@@ -12,7 +12,7 @@ build:
 
 integrations:
   notifications:
-    - integrationName: deepika-webhookV2   #issue will get created in github samleNod project
+    - integrationName: test-old-webhook   #issue will get created in github samleNod project
       type: webhook
       payload:
         - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
