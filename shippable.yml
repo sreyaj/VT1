@@ -13,14 +13,14 @@ build:
     
 integrations:
   notifications:
-    - integrationName: test-old-webhook   #issue will get created in github samleNod project
-      type: webhook
-      payload:
-        - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
-        - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
-      on_start: always
-      on_success: always
-      on_failure: always   
+  #  - integrationName: test-old-webhook   #issue will get created in github samleNod project
+  #    type: webhook
+  #    payload:
+  #      - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
+  #      - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
+  #    on_start: always
+  #    on_success: always
+  #    on_failure: always   
 
     - integrationName: test-generictrigger #samplNod project in shiptest-rc-ow will trigger
       type: webhook
