@@ -8,7 +8,7 @@ python:
 build:
   ci:
     - python --version
-    - shipctl put_resource_state "test_params" TRIGGER_REASON BaseImgChanged
+   # - shipctl put_resource_state "test_params" TRIGGER_REASON BaseImgChanged
 
 #integrations:
  # notifications:
