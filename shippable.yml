@@ -8,8 +8,8 @@ python:
   - 3.6
 
 env:
-  global:
-    - ENVG: "goo"
+ # global:
+  #  - ENVG: "goo"
   matrix:
     - ENV1: "foo"
       ENV2: "bar"
