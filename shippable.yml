@@ -4,20 +4,64 @@ language: python
 # Version number
 python:
   - 2.7
+  - 3.2
+  - 3.6
+
+env:
+  global:
+    - ENVG: "goo"
+  matrix:
+    - ENV1: "foo"
+      ENV2: "bar"
+    - ENV1: "boo"
+      ENV2: "car"
+
+matrix:
+  exclude:
+    - python: 3.6
+      env: ENV1=foo ENV2=bar
+  include:
+    - python: 3.6
+      env: ENV1=foo ENV2=bar
+  allow_failures:
+    - python: 3.2
+
+# the above combination should result in the following 6 matrix, 2 of which will
+# fail, but allow failures will still get the build to succeed
+
+# $SHIPPABLE_PYTHON_VERSION=2.7 ENV1: "foo" ENV2: "bar" ENVG: "goo"
+# $SHIPPABLE_PYTHON_VERSION=2.7 ENV1: "boo" ENV2: "car" ENVG: "goo"
+
+# $SHIPPABLE_PYTHON_VERSION=3.2 ENV1: "foo" ENV2: "bar" ENVG: "goo"   FAILS
+# $SHIPPABLE_PYTHON_VERSION=3.2 ENV1: "boo" ENV2: "car" ENVG: "goo"   FAILS
+
+# $SHIPPABLE_PYTHON_VERSION=3.6 ENV1: "foo" ENV2: "bar" ENVG: "goo"
+# $SHIPPABLE_PYTHON_VERSION=3.6 ENV1: "boo" ENV2: "car" ENVG: "goo"
 
 build:
   ci:
     - python --version
-   # - shipctl put_resource_state "test_params" TRIGGER_REASON BaseImgChanged
-
-#integrations:
- # notifications:
-  #  - integrationName: deepika-webhookV2   #issue will get created in github samleNod project
-   #   type: webhook
-    #  payload:
-     #   - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
-      #  - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL 
-      #on_start: always
-      #on_success: always
-      #on_failure: always   
- 
+    - |
+      echo "ENV1=$ENV1"
+      echo "ENV2=$ENV2"
+      echo "ENVG=$ENVG"
+      echo "$SHIPPABLE_PYTHON_VERSION=$$SHIPPABLE_PYTHON_VERSION"
+    - |
+      if [ "$ENV1" == "foo" ]; then
+        if [ "$ENV2" != "bar" ]; then
+          echo "Matrix was not setup correctly"
+          exit 1
+        fi
+      fi
+    - |
+      if [ "$ENV1" == "boo" ]; then
+        if [ "$ENV2" != "car" ]; then
+          echo "Matrix was not setup correctly"
+          exit 1
+        fi
+      fi
+    - |
+      if [ "$ENVG" != "goo" ]; then
+        echo "Matrix was not setup correctly"
+        exit 1
+      fi
